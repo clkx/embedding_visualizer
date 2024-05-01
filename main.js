@@ -27,6 +27,7 @@ scene.add(light);
 
 const spheres = []; // Store all spheres
 const lines = []; // Store lines for later removal
+const loadingDiv = document.getElementById('loadingDiv'); // Access loading animation element
 
 function createSphere(xPosition, yPosition, zPosition, name, genre, prompt) {
     const geometry = new THREE.SphereGeometry(15, 32, 16);
@@ -48,7 +49,8 @@ async function fetchData() {
     data.forEach(item => {
         createSphere(item.umap_3d[0] * 1000, item.umap_3d[1] * 1000, item.umap_3d[2] * 1000, item.name, item.genre, item.prompt);
     });
-    animate();
+    loadingDiv.style.display = 'none'; // Hide the loading animation when data is loaded
+    animate()
 }
 
 let isAnimating = true;
@@ -178,4 +180,4 @@ function fadeOutLine(line) {
 }
 
 fetchData();
-animate();
+// animate()
