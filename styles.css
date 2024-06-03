@@ -8,7 +8,6 @@ body {
 #infoDiv {
     position: absolute;
     display: none;
-    /* background-color: #b4b4b4; */
     background-color: #d4d4d4;
     opacity: 0.8;
     padding: 12px 16px; 
@@ -47,83 +46,113 @@ body {
     align-items: center;
     font-size: 60px;
     color: white;
-    z-index: 200; /* Higher z-index to cover other elements */
+    z-index: 200; /* 較高的z-index來覆蓋其他元素 */
 }
 
+#colorButton, #rotateButton {
+    position: absolute;
+    top: 10px;
+    padding: 10px 20px;
+    z-index: 300;
+    cursor: pointer;
+
+    background-color: #5c5c5c;
+    opacity: 0.8;
+    padding: 12px 16px; 
+    /* pointer-events: none; */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    font-size: 30px;
+    line-height: 1.5; 
+    z-index: 100;
+
+}
+
+#colorButton {
+    top: 30px;
+    left: 30px;
+}
+
+#rotateButton {
+    top: 130px;
+    left: 30px;
+}
+
+/* 響應式設計 */
 @media only screen and (max-width: 520px) {
     #titleDiv {
-        font-size: 20px; /* Smaller text size for smaller screens */
+        font-size: 20px; /* 較小的螢幕時縮小文字尺寸 */
     }
     #infoDiv {
-        font-size: 14px; /* Smaller text size */
-        padding: 8px 10px; /* Smaller padding */
+        font-size: 14px; /* 較小的文字尺寸 */
+        padding: 8px 10px; /* 較小的填充 */
     }
     #loadingDiv {
-        font-size: 30px; /* Smaller text size */
+        font-size: 30px; /* 較小的文字尺寸 */
     }
     body {
-        font-size: 14px; /* Smaller base font size for body text */
+        font-size: 14px; /* 較小的基礎字體尺寸 */
     }
 }
 
 @media only screen and (min-width: 521px) and (max-width: 600px) {
     #titleDiv {
-        font-size: 30px; /* Intermediate text size for medium screens */
+        font-size: 30px; /* 中等螢幕時的文字尺寸 */
     }
     #infoDiv {
-        font-size: 15px; /* Slightly larger text size */
-        padding: 10px 12px; /* Slightly larger padding */
+        font-size: 15px; /* 略大的文字尺寸 */
+        padding: 10px 12px; /* 略大的填充 */
     }
     #loadingDiv {
-        font-size: 40px; /* Smaller text size */
+        font-size: 40px; /* 略小的文字尺寸 */
     }
     body {
-        font-size: 16px; /* Intermediate base font size for body text */
+        font-size: 16px; /* 中等基礎字體尺寸 */
     }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 800px) {
     #titleDiv {
-        font-size: 30px; /* Intermediate text size for medium screens */
+        font-size: 30px; /* 中等螢幕時的文字尺寸 */
     }
     #infoDiv {
-        font-size: 15px; /* Slightly larger text size */
-        padding: 10px 12px; /* Slightly larger padding */
+        font-size: 15px; /* 略大的文字尺寸 */
+        padding: 10px 12px; /* 略大的填充 */
     }
     #loadingDiv {
-        font-size: 40px; /* Smaller text size */
+        font-size: 40px; /* 略小的文字尺寸 */
     }
     body {
-        font-size: 16px; /* Intermediate base font size for body text */
+        font-size: 16px; /* 中等基礎字體尺寸 */
     }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1024px) {
     #titleDiv {
-        font-size: 48px; /* Intermediate text size for medium screens */
+        font-size: 48px; /* 中等螢幕時的文字尺寸 */
     }
     #infoDiv {
-        font-size: 15px; /* Slightly larger text size */
-        padding: 10px 12px; /* Slightly larger padding */
+        font-size: 15px; /* 略大的文字尺寸 */
+        padding: 10px 12px; /* 略大的填充 */
     }
     #loadingDiv {
-        font-size: 40px; /* Smaller text size */
+        font-size: 40px; /* 略小的文字尺寸 */
     }
     body {
-        font-size: 16px; /* Intermediate base font size for body text */
+        font-size: 16px; /* 中等基礎字體尺寸 */
     }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* 大型設備（桌面，992px以上） */
 @media only screen and (min-width: 1025px) {
     #titleDiv {
-        font-size: 60px; /* Suitable for larger displays */
+        font-size: 60px; /* 適合大顯示器的文字尺寸 */
     }
     #infoDiv {
-        font-size: 16px; /* Standard text size */
-        padding: 12px 16px; /* Standard padding */
+        font-size: 16px; /* 標準的文字尺寸 */
+        padding: 12px 16px; /* 標準的填充 */
     }
     body {
-        font-size: 18px; /* Larger base font size for body text */
+        font-size: 18px; /* 較大的基礎字體尺寸 */
     }
 }
